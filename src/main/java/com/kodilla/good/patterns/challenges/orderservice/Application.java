@@ -11,7 +11,6 @@ public class Application {
         Hello hello = new Hello();
         hello.sayHello(user, orderDate);
         List<Product> productList = new ArrayList<>();
-
             productList.add(new Product("book", 35.90, 2));
             productList.add(new Product("pen", 3.00, 5));
             productList.add(new Product("jacket", 354.99, 1));
@@ -27,7 +26,6 @@ public class Application {
             }
         }
         System.out.println("Order total: " + totalPrice);
-
         SendEmail sendEmail = new SendEmail();
         sendEmail.inform(user);
     }

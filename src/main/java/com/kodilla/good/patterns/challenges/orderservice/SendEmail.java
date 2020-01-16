@@ -5,7 +5,4 @@ public class SendEmail implements InfoService {
     public void inform(User user) {
         System.out.println("Your delivery is in progress.");
     }
-
-
-
 }
