@@ -5,14 +5,13 @@ import java.util.List;
 
 public class Application {
     public static void main(String[] args) {
-        List<Producer> producerList = new ArrayList<>();
-        producerList.add(new Producer("NewProducer1", "dairy products", 150));
-        producerList.add(new Producer("NewProducer2", "meat", 100));
+        List<Order> orderList = new ArrayList<>();
+        orderList.add(new Order("NewProducer1", "dairy products", 150));
+        orderList.add(new Order("NewProducer2", "meat", 100));
         User user = new User("James", "Smith");
-        NewProducer1 newProducer1 = new NewProducer1();
-        Producer producer = new Producer("ID", "someProduct", 0);
-        newProducer1.process(producer);
-        NewProducer2 newProducer2 = new NewProducer2();
-        newProducer2.inform(user);
+        Food2Door food2Door = new Food2Door();
+        for(Order order: orderList)
+            food2Door.processOrder(order, user);
+
     }
 }

@@ -1,14 +1,8 @@
 package com.kodilla.good.patterns.challenges.food2door;
 
-public class Producer {
-    String producerID;
-    String whatProduct;
-    int howMany;
-
-    public Producer(String producerID, String whatProduct, int howMany) {
-        this.producerID = producerID;
-        this.whatProduct = whatProduct;
-        this.howMany = howMany;
+public interface Producer {
+    void process(Order order);
+    default String inform(User user) {
+        return "Hello, " + user.getUserName() + " " + user.getUserSurname() + "! " + "Your order has been completed!";
     }
 }
-
